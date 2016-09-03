@@ -1,0 +1,7 @@
+cau truc: 
+	server receive data via post 
+	=> emit event to client
+	=> client update the chart
+
+
+server va client ket noi realtime thong qua socket.io
