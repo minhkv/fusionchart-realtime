@@ -27,35 +27,9 @@ FusionCharts.ready(function(){
 	}
 
 	socket.on('data', function(data) {
-		fusioncharts.setJSONData({
-            "chart": {
-	            "caption": "Real-time stock price monitor",
-	            "subCaption": "Harry's SuperMart",
-	            "xAxisName": "Time",
-	            "yAxisName": "Stock Price",
-	            "numberPrefix": "$",
-	            "refreshinterval": "5",
-	            "yaxisminvalue": "35",
-	            "yaxismaxvalue": "36",
-	            "numdisplaysets": "10",
-	            "labeldisplay": "rotate",
-	            "showValues": "0",
-	            "showRealTimeValue": "0",
-	            "theme": "fint"
-	        }, 
-            "categories": [{
-	            "category": [{
-	                "label": "Day Start"
-	            }]
-	        }],
-	        "dataset": [{
-	            "data": [{
-	                "value": "35.6"
-	            }]
-	        }]
-        });
-        console.log(data);
-        
+		var label = "value";
+		strData = "&label=" + label + "&value=" + data;
+		fusioncharts.feedData(strData);
 	});
 
 	

@@ -9,8 +9,6 @@ var io = require('socket.io')(http);
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-
-
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/public/html/index.html');
 	res.end();
