@@ -16,6 +16,8 @@ var connection = mysql.createConnection({
 
 connection.connect();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 app.use(express.static('public'));
 app.get('/', function(req, res) {
 	res.sendFile(__dirname + '/public/html/index.html');
