@@ -1,7 +1,3 @@
-
-
-
-
 FusionCharts.ready(function(){
 
 	var socket = io();
